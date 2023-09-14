@@ -1,0 +1,56 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+'abstract class AbstractList
+'abstract AbstractCollection
+'interface List
+'interface Collection
+'
+'List <|-- AbstractList
+'Collection <|-- AbstractCollection
+'
+'Collection <|- List
+'AbstractCollection <|- AbstractList
+'AbstractList <|-- ArrayList
+'
+'class ArrayList {
+'Object[] elementData
+'size()
+'}
+'
+'enum TimeUnit {
+'DAYS
+'HOURS
+'MINUTES
+'}
+
+class Person {
+
+String utorID
+String first
+List<String> middle
+String last
+void changeNames(String first)
+void changeNames(String f, String m, String l)
+
+}
+
+class Student {
+
+int studentID
+List<Course> courses
+void payFees()
+String getDisplayName()
+}
+
+class Student extends Person
+
+class University {
+List<Person} people
+
+}
+
+University *-- Person
+
+
+@enduml
