@@ -28,7 +28,10 @@ int studentNumber
 }
 
 University *-- Person
-Person <-- Student
+
+Person <|-- Student
+'below is equivalent to the above
+'class Student extends Person
 
 'abstract class AbstractList
 'abstract AbstractCollection
