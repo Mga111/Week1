@@ -40,7 +40,18 @@ public class Person {
         //       of each piece of code that we write.
     }
 
-    // TODO: override the toString method for the Person class
+    // DONE: used right-click Generate... toString() and chose the String concat template
+    // TODO: see if we can format this better!
+    @Override
+    public String toString() {
+        return "Person{" +
+                "utorID='" + utorID + '\'' +
+                ", first='" + first + '\'' +
+                ", middle=" + middle +
+                ", last='" + last + '\'' +
+                '}';
+    }
+
 
     // TODO: add the implmentations of our changeNames method
 
