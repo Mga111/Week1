@@ -19,8 +19,7 @@ public class Person {
     private String utorID;
     private String first;
     private List<String> middle;
-
-    String last;
+    private String last;
 
     public Person(String utorID, String first, List<String> middle, String last) {
         this.utorID = utorID;
@@ -33,7 +32,7 @@ public class Person {
 
         Person p = new Person("u", "first",
                 new ArrayList<>(), "last");
-
+        System.out.println(p.getUtorID());
         System.out.println(p);
 
         // TODO: add some more code which demonstrates the functionality
@@ -52,12 +51,52 @@ public class Person {
                 '}';
     }
 
-
+    public void changeNames(String name){
+        this.first = name;
+    }
+    public void changeNames(String name , List<String> middles, String lasts){
+        this.first = name;
+        this.last = lasts;
+        this.middle = new LinkedList<>(middles);
+    }
     // TODO: add the implmentations of our changeNames method
-
+}
     // TODO: define a Student class which is a subclass of Person
+public class Student extends Person{
 
+    private int studentID;
+    private List<Course> courses;
+
+    public Student(String utorID, String first, List<String> middle, String last, int studentID) {
+        super(utorID, first, middle, last);
+        this.studentID = studentID;
+    }
+
+    public Student(String first, int studentID) {
+        super(first);
+        this.studentID = studentID;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "utorID='" + utorID + '\'' +
+                ", first='" + first + '\'' +
+                ", middle=" + middle +
+                ", last='" + last + '\'' +
+                "studentID='" + String.valueOf(studentID) + '\'' +
+                '}';
+    }
+    public void payFees(){
+
+    }
+
+    public void displayName(){
+        System.out.println(first);
+    }
+
+}
     // TODO: create the University class
 
     // TODO: revisit the specification and see if there is anything else we might add or change
-}
+
